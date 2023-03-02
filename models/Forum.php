@@ -1,4 +1,4 @@
-<?php
+        <?php
 
         namespace models;
         use core\Model;
@@ -6,7 +6,7 @@
 
         class Forum extends Model {
 
-	    public function gewNews(){
+	public function gewNews(){
         $result = $this->db->row('SELECT title, description FROM news');
         return $result;
         }
@@ -23,7 +23,7 @@
         echo 'Successful!';
         echo '</pre>';
         } else {
-            echo 'Проблемы в коде в моменте отправки форм (написании сообщения)';
+        echo 'Проблемы в коде в моменте отправки форм (написании сообщения)';
         }}
         $comments = $this->db->query("SELECT * FROM myforum.comments ORDER BY date DESC");
         

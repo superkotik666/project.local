@@ -11,7 +11,7 @@
         return $result;
         } 
         public function checkconnect (){
-        if (!empty($_POST['login']) and !empty($_POST['password'])) {
+        if (!empty($_POST['login']) && !empty($_POST['password'])) {
         $login = $_POST['login'];
         $password = $_POST['password'];
         $statement = $this->db->column("SELECT * FROM users WHERE login='$login'");

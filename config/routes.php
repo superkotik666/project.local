@@ -8,7 +8,7 @@ return [
 	],
 	
 	'forum' => [
-		'controller' => 'main',
+		'controller' => 'forum',
 		'action' => 'send',
 	],
 	

@@ -1,5 +1,5 @@
-<?php
-namespace models;
+    <?php
+    namespace models;
     use core\Model;
     use lib\Db;
   

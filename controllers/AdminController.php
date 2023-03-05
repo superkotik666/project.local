@@ -1,16 +1,15 @@
-<?php
+       <?php
 
-    namespace controllers;
-    use core\Controller;
-    use lib\Db;
-    use models\Main;
+        namespace controllers;
+        use core\Controller;
+        use lib\Db;
+        use models\Main;
 
-    class AdminController extends Controller {
+        class AdminController extends Controller {
 
 	public function showUserAction (){ 
 	$this->view->render('Страница Администратора' );
 	$this->model->showLogins();
-	
 	}
 	
 	// работает только по адресу: admin/delete. придумать чтобы работало по адресу: admin/page

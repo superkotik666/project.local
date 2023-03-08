@@ -27,7 +27,10 @@ public function render($title, $vars = []) {
         require 'views/layouts/'.$this->layout.'.php';
     }
 }
-
+public function redirect($url) {
+		header('location: /'.$url);
+		exit;
+	}
 }
 
 

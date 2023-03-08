@@ -26,7 +26,10 @@ return [
 		'controller' => 'admin',
 		'action' => 'showUser',
 	],
-	
+	'posts/delete/{id:\d+}' => [
+		'controller' => 'admin',
+		'action' => 'delete',
+	],
 ];
 
 ?>

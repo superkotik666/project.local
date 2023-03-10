@@ -10,7 +10,7 @@
     $login = $_POST['login'];
     $password = $_POST['password'];
     $statement = $this->db->column("SELECT * FROM users WHERE login='$login'");
-    
+    // необходимо добавить хеширование паролей и проверку хеширование при аутентификации
     if (empty($statement)) {
     $this->db->column("INSERT INTO users SET login='$login', password='$password'");
     $_SESSION['auth'] = true;

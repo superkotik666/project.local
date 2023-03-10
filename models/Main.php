@@ -9,10 +9,11 @@
     if (!empty($_POST['login']) && !empty($_POST['password'])) {
     $login = $_POST['login'];
     $password = $_POST['password'];
+    $mail = $_POST['email'];
     $statement = $this->db->column("SELECT * FROM users WHERE login='$login'");
     // необходимо добавить хеширование паролей и проверку хеширование при аутентификации
     if (empty($statement)) {
-    $this->db->column("INSERT INTO users SET login='$login', password='$password'");
+    $this->db->column("INSERT INTO users SET login='$login', password='$password', email ='$mail'");
     $_SESSION['auth'] = true;
     $_SESSION['login'] = $_REQUEST['login']; 
     $addr = '/forum';

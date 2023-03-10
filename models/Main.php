@@ -11,18 +11,19 @@
     $password = $_POST['password'];
     $mail = $_POST['email'];
     $statement = $this->db->column("SELECT * FROM users WHERE login='$login'");
-    // необходимо добавить хеширование паролей и проверку хеширование при аутентификации
+    
     if (empty($statement)) {
-    $this->db->column("INSERT INTO users SET login='$login', password='$password', email ='$mail'");
+    $this->db->column("INSERT INTO users SET login='$login', password='$password' , email ='$mail'");
     $_SESSION['auth'] = true;
     $_SESSION['login'] = $_REQUEST['login']; 
     $addr = '/forum';
     header("Location: $addr");
     } else {
     echo 'Такой логин уже используется';
-    }}}}
-
-    ?>
+          }
+       }
+    }
+ }
 
 
     

@@ -39,7 +39,7 @@ public function checkHash(){
        $login = $_POST['login'];
        $hash = $this->db->column("SELECT password FROM users WHERE login ='$login'");
     if (password_verify($_POST['password'],$hash )){
-  return true;
+       return true;
   }
 }
 

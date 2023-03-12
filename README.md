@@ -1,1 +1,2 @@
-simple oop forum based on mvc
+##Simple oop forum based on MVC
+super simple PHP app

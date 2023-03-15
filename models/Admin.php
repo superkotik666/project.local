@@ -56,9 +56,7 @@ namespace models;
 		
 	}
 
-public function ppp(){
-  
-}
+
 
 }
 

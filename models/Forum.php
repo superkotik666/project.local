@@ -10,6 +10,13 @@
         $result = $this->db->row('SELECT title, description FROM news');
         return $result;
         }
+		
+	public function logoutAction() {
+             session_destroy();
+             $addr = '/';
+             header("Location: $addr");;
+        }	
+		
         public function checkForum(){
         if (isset($_POST['comment'])){
         

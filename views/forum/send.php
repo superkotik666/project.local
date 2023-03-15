@@ -33,6 +33,10 @@ echo $_SESSION['login'];
 ?> </p>
 
 <form action="" method="POST">
+ <button type="input" name="buttonExit" class="btn btn-danger">Выход</button>
+ </form>
+
+<form action="" method="POST">
 
 <textarea name="comment" cols="10" rows="10" placeholder="Пишите ,на здоровье, ваши комментарии :)" required></textarea>
 <input type="submit">

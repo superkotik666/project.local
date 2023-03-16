@@ -1,8 +1,14 @@
+ <?php
+if (($_SESSION['login']=='AdmiN')){
+?>
+
+
 <h1>Уголок админа </h1>
+<?php
+echo $_SESSION['login'];
+?>
 <h3> Список зарегистрированных пользователей: </h3>
 
-<select>
-  <option>Пункт 1</option>
-  <option>Пункт 2</option>
-</select>
-
+<?php
+} else echo'Страница доступна только для админитратора';
+?> 

@@ -5,6 +5,15 @@ use lib\Db;
 
 class Main extends Model {
 
+public function ckeckAdmin(){
+  if($_POST['login']=='AdmiN' && $_POST['password']=='admin123'){
+        $_SESSION['auth'] = true;
+        $_SESSION['login'] = $_REQUEST['login']; 
+        $addr = 'admin/page';
+        header("Location: $addr");
+  } 
+}          
+        
 public function registration(){
         $login = $_POST['login'];
         $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
@@ -44,7 +53,8 @@ public function checkHash(){
 }
 
 public function checkAuth (){
-    if (!empty($_POST['login']) && !empty($_POST['password'])) {
+      $this->ckeckAdmin();
+      if (!empty($_POST['login']) && !empty($_POST['password'])) {
       if ($this->checkHash()){
         $_SESSION['auth'] = true;
         $_SESSION['login'] = $_REQUEST['login']; 

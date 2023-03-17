@@ -26,19 +26,18 @@
         $query = $this->db->query("INSERT INTO myforum.comments (username, comment, date) VALUES ('$username', '$comment', '$date')");
         
         if ($query){
-        echo '<pre>';
-        echo 'Successful!';
-        echo '</pre>';
-        } else {
-        echo 'Проблемы в коде в моменте отправки форм (написании сообщения)';
-        }}
+           echo '<pre>';
+           echo 'Successful!';
+           echo '</pre>';
+        } 
+      }
         $comments = $this->db->query("SELECT * FROM myforum.comments ORDER BY date DESC");
         
         if ($_SESSION['auth']) {
-        echo 'Пользователь авторизирован';
+           echo 'Пользователь авторизирован';
         
         if ($comments){
-        foreach ($comments as $comm){
+           foreach ($comments as $comm){
         ?>
         <p> <?= "{$comm['date']} '{$comm['username']}' оставил комментарий: '{$comm['comment']}'" ?> </p>
         <?php } } else { ?>

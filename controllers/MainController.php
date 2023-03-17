@@ -8,14 +8,14 @@
     class MainController extends Controller {
 
     public function authAction() {
-	$this->view->render('Вход в Пустоту' );
-	$this->model->checkAuth ();	
+	    $this->view->render('Вход в Пустоту' );
+	    $this->model->checkAuth ();	
 	}
 	
-    public function authAction() {
-	$this->view->render('Вход в Пустоту' );
-	$this->model->checkconnect();	
-	}
+    public function regAction (){
+        $this->view->render('Страница регистрации' );
+        $this->model->checkconnect();
+       }
     }
         
         ?>
